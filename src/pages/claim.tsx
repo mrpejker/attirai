@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 
+interface ClaimData {
+  property1: string;
+  property2: number;
+  // ... other properties
+}
+
 const ClaimPage: React.FC = () => {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<ClaimData | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -9,10 +15,17 @@ const ClaimPage: React.FC = () => {
         const response = await fetch(
           "https://vself.app/claim/2537519565?strings=235222017374",
         );
-        const jsonData = await response.json();
+        if (!response.ok) {
+          throw new Error(`Error: ${response.status}`);
+        }
+        const jsonData: ClaimData = await response.json();
         setData(jsonData);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        if (error instanceof Error) {
+          console.error("Error fetching data:", error.message);
+        } else {
+          console.error("Error fetching data:", error);
+        }
       }
     };
 
