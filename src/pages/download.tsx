@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-//import ClaimPage from "./claim";
 import { useRouter } from "next/router";
 
 const DownloadPage: React.FC = () => {
@@ -12,7 +11,8 @@ const DownloadPage: React.FC = () => {
   ) => {
     e.preventDefault();
     window.open(url, "_blank"); // Open the app store link in a new tab
-    //router.push("/ClaimPage"); // Navigate to ClaimPage in the current tab
+    window.location.href =
+      "https://vself.app/claim/2537519565?strings=235222017374"; // Navigate to the specified URL in the current tab
   };
 
   return (
