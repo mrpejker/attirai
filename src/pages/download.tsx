@@ -24,9 +24,16 @@ const DownloadPage: React.FC = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="h-70vh">
-        <img src="/Campaign.png" alt="Campaign" />
+      <div className="h-3/4">
+        {" "}
+        {/* Adjusted height to 3/4 of the viewport */}
+        <img
+          src="/Campaign.png"
+          alt="Campaign"
+          className="h-full w-full object-cover"
+        />
       </div>
+
       <div className="mb-6 rounded-lg bg-gray-200 p-8 text-center shadow-md">
         <h1 className="mb-4 text-xl">Download Our App</h1>
 
