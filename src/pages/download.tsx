@@ -32,42 +32,51 @@ const DownloadPage: React.FC = () => {
       {/* Download Buttons */}
       <div className="flex flex-grow items-center justify-center">
         {" "}
-        {/* Centering content in the remaining space */}
-        <div className="mb-6 rounded-lg bg-gray-200 p-8 text-center shadow-md">
-          <h1 className="mb-4 text-xl">Download Our App</h1>
+        <div
+          className="flex flex-grow items-center justify-center"
+          style={{
+            backgroundImage: `url('/BackC.png')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Centering content in the remaining space */}
+          <div className="mb-6 rounded-lg bg-gray-100 p-8 text-center shadow-md">
+            <h1 className="mb-4 text-xl">Download Our App</h1>
 
-          {/* Google Play Store Button */}
-          <a
-            href="https://play.google.com/store/apps/details?id=com.sweatwallet"
-            className="m-2 inline-block"
-            onClick={(e) =>
-              handleAppDownload(
-                e,
-                "https://play.google.com/store/apps/details?id=com.sweatwallet",
-              )
-            }
-          >
-            <Image
-              src="/google.png"
-              alt="Google Play"
-              width={150}
-              height={50}
-            />
-          </a>
+            {/* Google Play Store Button */}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.sweatwallet"
+              className="m-2 inline-block"
+              onClick={(e) =>
+                handleAppDownload(
+                  e,
+                  "https://play.google.com/store/apps/details?id=com.sweatwallet",
+                )
+              }
+            >
+              <Image
+                src="/google.png"
+                alt="Google Play"
+                width={150}
+                height={50}
+              />
+            </a>
 
-          {/* Apple App Store Button */}
-          <a
-            href="https://apps.apple.com/gb/app/sweat-wallet/id1619316571"
-            className="m-2 inline-block"
-            onClick={(e) =>
-              handleAppDownload(
-                e,
-                "https://apps.apple.com/gb/app/sweat-wallet/id1619316571",
-              )
-            }
-          >
-            <Image src="/apple.png" alt="App Store" width={150} height={50} />
-          </a>
+            {/* Apple App Store Button */}
+            <a
+              href="https://apps.apple.com/gb/app/sweat-wallet/id1619316571"
+              className="m-2 inline-block"
+              onClick={(e) =>
+                handleAppDownload(
+                  e,
+                  "https://apps.apple.com/gb/app/sweat-wallet/id1619316571",
+                )
+              }
+            >
+              <Image src="/apple.png" alt="App Store" width={150} height={50} />
+            </a>
+          </div>
         </div>
       </div>
     </div>
