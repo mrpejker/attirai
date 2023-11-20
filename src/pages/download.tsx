@@ -19,11 +19,14 @@ const DownloadPage: React.FC = () => {
     <div
       className="flex h-screen items-end justify-center"
       style={{
-        backgroundImage: `url('/Campaign.png')`,
+        backgroundImage: `url('/BackC.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
+      <div className="h-70vh">
+        <img src="/Campaign.png" alt="Campaign" />
+      </div>
       <div className="mb-6 rounded-lg bg-gray-200 p-8 text-center shadow-md">
         <h1 className="mb-4 text-xl">Download Our App</h1>
 
