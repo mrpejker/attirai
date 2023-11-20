@@ -10,7 +10,8 @@ const ClaimPage: React.FC = () => {
   const [data, setData] = useState<ClaimData | null>(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    // Mark the IIFE with 'void'
+    void (async () => {
       try {
         const response = await fetch(
           "https://vself.app/claim/2537519565?strings=235222017374",
@@ -18,7 +19,7 @@ const ClaimPage: React.FC = () => {
         if (!response.ok) {
           throw new Error(`Error: ${response.status}`);
         }
-        const jsonData: ClaimData = await response.json();
+        const jsonData: ClaimData = await response.json(); // Ensure jsonData matches the ClaimData type
         setData(jsonData);
       } catch (error) {
         if (error instanceof Error) {
@@ -27,9 +28,7 @@ const ClaimPage: React.FC = () => {
           console.error("Error fetching data:", error);
         }
       }
-    };
-
-    fetchData();
+    })();
   }, []);
 
   if (!data) {
