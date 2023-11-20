@@ -16,7 +16,48 @@ const DownloadPage: React.FC = () => {
   };
 
   return (
-    <div
+            <div
+                className="flex h-screen items-end justify-center"
+                style={{
+                    backgroundImage: `url('/Campaign.png')`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                }}
+            >
+                <h1 className="mb-4 text-xl">Download Our App</h1>
+
+                <div className="mb-10 rounded-lg bg-gray-200 p-10 text-center shadow-md">
+                    <a
+                        href="https://play.google.com/store/apps/details?id=com.sweatwallet"
+                        className="m-2 inline-block"
+                        onClick={(e) =>
+                            handleAppDownload(
+                                e,
+                                "https://play.google.com/store/apps/details?id=com.sweatwallet",
+                            )
+                        }
+                    >
+                        <Image src="/google.png" alt="Google Play" width={150} height={50} />
+                    </a>
+
+                    <a
+                        href="https://apps.apple.com/gb/app/sweat-wallet/id1619316571"
+                        className="m-2 inline-block"
+                        onClick={(e) =>
+                            handleAppDownload(
+                                e,
+                                "https://apps.apple.com/gb/app/sweat-wallet/id1619316571",
+                            )
+                        }
+                    >
+                        <Image src="/apple.png" alt="App Store" width={150} height={50} />
+                    </a>
+                </div>
+            </div>
+        );
+    };
+
+    export default DownloadPage;
       className="flex h-screen items-end justify-center"
       style={{
         backgroundImage: `url('/Campaign.png')`,
