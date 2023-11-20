@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ClaimPage from "./claim";
+//import ClaimPage from "./claim";
 import { useRouter } from "next/router";
 
 const DownloadPage: React.FC = () => {
