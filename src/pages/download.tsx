@@ -12,7 +12,7 @@ const DownloadPage: React.FC = () => {
     e.preventDefault();
     window.open(url, "_blank"); // Open the app store link in a new tab
     window.location.href =
-      "https://vself.app/claim/2537519565?strings=235222017374"; // Navigate to the specified URL in the current tab
+      "https://staging.vself.app/claim/3093602180?strings=1013266691360"; // Navigate to the specified URL in the current tab
   };
 
   return (
