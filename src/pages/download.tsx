@@ -12,7 +12,7 @@ const DownloadPage: React.FC = () => {
   ) => {
     e.preventDefault();
     window.open(url, "_blank"); // Open the app store link in a new tab
-    router.push("/ClaimPage"); // Navigate to ClaimPage in the current tab
+    //router.push("/ClaimPage"); // Navigate to ClaimPage in the current tab
   };
 
   return (
