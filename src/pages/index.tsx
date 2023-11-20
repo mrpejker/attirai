@@ -2,7 +2,7 @@
 //import Link from "next/link";
 
 import type { NextPage } from "next";
-import DownloadPage from "./DownloadPage";
+import DownloadPage from "./download";
 
 const Home: NextPage = () => {
   return <DownloadPage />;
