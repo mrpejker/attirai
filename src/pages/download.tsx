@@ -16,12 +16,18 @@ const DownloadPage: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen flex-col items-center justify-between">
-      <div className="p-10 text-center">
-        {/* Campaign Element */}
-        <Image src="/Campaign.png" alt="Campaign" width={300} height={300} />
+    <div className="flex h-screen flex-col">
+      {/* Campaign Element - Takes all available space */}
+      <div className="flex-grow p-10 text-center">
+        <Image
+          src="/Campaign.png"
+          alt="Campaign"
+          layout="fill"
+          objectFit="cover"
+        />
       </div>
 
+      {/* Download Element - Positioned at the bottom */}
       <div className="mb-10 rounded-lg bg-gray-200 p-10 text-center shadow-md">
         <h1 className="mb-4 text-xl">Download Our App</h1>
 
