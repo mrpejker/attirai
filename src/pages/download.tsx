@@ -24,7 +24,7 @@ const DownloadPage: React.FC = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="mb-6 rounded-lg bg-gray-200 p-6 text-center shadow-md">
+      <div className="mb-5 rounded-lg bg-gray-200 p-5 text-center shadow-md">
         <h1 className="mb-4 text-xl">Download Our App</h1>
 
         <a
