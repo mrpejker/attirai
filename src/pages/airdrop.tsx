@@ -39,12 +39,12 @@ const AirdropPage = () => {
           <input
             type="text"
             placeholder="Your app code"
-            style={{ marginBottom: "10px", width: "100%" }} // Make input full width
+            style={{ marginBottom: "10px", width: "100%", color: "grey" }} // Added grey text color
           />
           <input
             type="text"
             placeholder="NEAR address"
-            style={{ width: "100%" }} // Make input full width
+            style={{ width: "100%", color: "grey" }} // Added grey text color
           />
         </div>
         <button
