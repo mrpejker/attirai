@@ -11,30 +11,26 @@ const InputForm: React.FC = () => {
 
   // Handle file change for the photo
   const handlePhotoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files && event.target.files[0]) {
-      const file = event.target.files[0];
-
+    const file = event.target.files?.[0];
+    if (file) {
       const reader = new FileReader();
       reader.onload = (e) => {
-        setPhotoPreviewUrl(e.target?.result as string);
+        setPhotoPreviewUrl(e.target?.result ?? "");
       };
       reader.readAsDataURL(file);
     }
   };
 
-  // Handle file change for the outfit
   const handleOutfitChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files && event.target.files[0]) {
-      const file = event.target.files[0];
-
+    const file = event.target.files?.[0];
+    if (file) {
       const reader = new FileReader();
       reader.onload = (e) => {
-        setOutfitPreviewUrl(e.target?.result as string);
+        setOutfitPreviewUrl(e.target?.result ?? "");
       };
       reader.readAsDataURL(file);
     }
   };
-
   // Handle file upload
   const handleUpload = async () => {
     // Collect files from both inputs
