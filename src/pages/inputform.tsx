@@ -157,7 +157,9 @@ const InputForm: React.FC = () => {
           </button>
         </div>
       </main>
-      <footer style={headerFooterStyle}>Terms and conditions</footer>
+      <footer style={headerFooterStyle}>
+        Terms and conditions & Privacy policy
+      </footer>
     </div>
   );
 };
