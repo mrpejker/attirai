@@ -1,4 +1,5 @@
 import React from "react";
+import { CSSProperties } from "react";
 
 const InputForm: React.FC = () => {
   // Separate states for each preview URL
@@ -73,38 +74,38 @@ const InputForm: React.FC = () => {
   };
 
   // Inline styles
-  const containerStyle = {
+  const containerStyle: CSSProperties = {
     backgroundImage: "url(BackC.png)", // Replace with the correct path to your image
     height: "100vh",
     display: "flex",
     flexDirection: "column",
   };
 
-  const headerFooterStyle = {
+  const headerFooterStyle: CSSProperties = {
     backgroundColor: "#f1f1f1",
     padding: "15px",
     textAlign: "center",
   };
 
-  const mainStyle = {
+  const mainStyle: CSSProperties = {
     flexGrow: 1,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   };
 
-  const formContainerStyle = {
+  const formContainerStyle: CSSProperties = {
     backgroundColor: "white",
     padding: "20px",
     borderRadius: "10px",
     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
   };
 
-  const inputContainerStyle = {
+  const inputContainerStyle: CSSProperties = {
     marginBottom: "20px",
   };
 
-  const buttonStyle = {
+  const buttonStyle: CSSProperties = {
     display: "block",
     width: "100%",
     padding: "10px",
