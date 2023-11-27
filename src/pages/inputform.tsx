@@ -77,13 +77,13 @@ const InputForm: React.FC = () => {
     backgroundImage: "url(BackC.png)", // Replace with the correct path to your image
     height: "100vh",
     display: "flex",
-    flexDirection: "column" as "column",
+    flexDirection: "column",
   };
 
   const headerFooterStyle = {
     backgroundColor: "#f1f1f1",
     padding: "15px",
-    textAlign: "center" as "center",
+    textAlign: "center",
   };
 
   const mainStyle = {
@@ -112,7 +112,7 @@ const InputForm: React.FC = () => {
     color: "white",
     border: "none",
     borderRadius: "5px",
-    cursor: "pointer" as "pointer",
+    cursor: "pointer",
   };
 
   return (
