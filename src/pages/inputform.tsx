@@ -15,6 +15,7 @@ const InputForm: React.FC = () => {
     if (file) {
       const reader = new FileReader();
       reader.onload = (e) => {
+        const result = e.target?.result;
         setPhotoPreviewUrl(typeof result === "string" ? result : "");
       };
       reader.readAsDataURL(file);
@@ -26,6 +27,7 @@ const InputForm: React.FC = () => {
     if (file) {
       const reader = new FileReader();
       reader.onload = (e) => {
+        const result = e.target?.result;
         setOutfitPreviewUrl(typeof result === "string" ? result : "");
       };
       reader.readAsDataURL(file);
