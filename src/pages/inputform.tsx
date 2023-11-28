@@ -1,6 +1,8 @@
 import React from "react";
 import { CSSProperties } from "react";
 
+type UploadResponse = Record<string, object>;
+
 const InputForm: React.FC = () => {
   // Separate states for each preview URL
   const [photoPreviewUrl, setPhotoPreviewUrl] = React.useState<string | null>(
@@ -61,9 +63,9 @@ const InputForm: React.FC = () => {
           method: "POST",
           body: formData,
         });
+        const result = (await response.json()) as UploadResponse;
 
         // Handle the server response
-        const result = await response.json();
         console.log(result);
       } catch (error) {
         console.error("Error uploading files:", error);
