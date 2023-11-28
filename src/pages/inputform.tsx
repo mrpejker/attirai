@@ -1,9 +1,11 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { CSSProperties } from "react";
 
 type UploadResponse = Record<string, object>;
 
 const InputForm: React.FC = () => {
+  const router = useRouter();
   // Separate states for each preview URL
   const [photoPreviewUrl, setPhotoPreviewUrl] = React.useState<string | null>(
     null,
@@ -63,10 +65,13 @@ const InputForm: React.FC = () => {
           method: "POST",
           body: formData,
         });
-        const result = (await response.json()) as UploadResponse;
-
-        // Handle the server response
-        console.log(result);
+        if (response.ok) {
+          const result = (await response.json()) as UploadResponse;
+          console.log(result);
+          await router.push("/AIimage");
+        } else {
+          console.error("Upload failed");
+        }
       } catch (error) {
         console.error("Error uploading files:", error);
       }

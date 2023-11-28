@@ -1,12 +1,11 @@
 import React from "react";
 import { useRouter } from "next/router";
-import InputForm from "./inputform";
 
 const IntroPage: React.FC = () => {
   const router = useRouter();
 
   // Inline styles
-  const containerStyle = {
+  const containerStyle1: React.CSSProperties = {
     backgroundImage: `url('att.png')`, // Make sure to put the correct path to your image file
     backgroundSize: "cover",
     height: "100vh",
@@ -19,13 +18,13 @@ const IntroPage: React.FC = () => {
     position: "relative",
   };
 
-  const buttonStyle = {
+  const buttonStyle1: React.CSSProperties = {
     marginTop: "20px",
     padding: "10px 20px",
     fontSize: "1rem",
     fontWeight: "bold" as const,
     color: "#000",
-    backgroundColor: "#FF2C3",
+    backgroundColor: "#FFF2C3",
     border: "none",
     borderRadius: "5px",
     cursor: "pointer" as const,
@@ -34,8 +33,8 @@ const IntroPage: React.FC = () => {
   };
 
   return (
-    <div style={containerStyle}>
-      <button style={buttonStyle} onClick={() => router.push("/inputform")}>
+    <div style={containerStyle1}>
+      <button style={buttonStyle1} onClick={() => router.push("/inputform")}>
         Try Now
       </button>
     </div>
